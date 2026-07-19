@@ -1,8 +1,3 @@
-/* ===============================
-   ShopBangla Professional CSS
-   Part 1 - Reset + Header
-=============================== */
-
 *{
     margin:0;
     padding:0;
@@ -11,14 +6,12 @@
 }
 
 body{
-    background:#f4f6f9;
+    background:#f5f5f5;
     color:#333;
-    line-height:1.6;
 }
 
 a{
     text-decoration:none;
-    color:inherit;
 }
 
 ul{
@@ -31,22 +24,20 @@ img{
 }
 
 .header{
-    width:100%;
-    background:#fff;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:12px 5%;
-    box-shadow:0 2px 10px rgba(0,0,0,.08);
+    padding:15px 60px;
+    background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
     position:sticky;
     top:0;
     z-index:1000;
 }
 
 .logo h2{
-    font-size:28px;
-    font-weight:700;
-    color:#198754;
+    color:#008000;
+    font-size:30px;
 }
 
 .logo span{
@@ -55,14 +46,13 @@ img{
 
 .navbar ul{
     display:flex;
-    align-items:center;
-    gap:22px;
+    gap:25px;
 }
 
 .navbar ul li a{
-    font-size:15px;
-    font-weight:600;
     color:#333;
+    font-size:17px;
+    font-weight:bold;
     transition:.3s;
 }
 
@@ -73,28 +63,24 @@ img{
 
 .search-box{
     display:flex;
-    align-items:center;
-    border:2px solid #198754;
+    border:2px solid #008000;
     border-radius:30px;
     overflow:hidden;
-    background:#fff;
 }
 
 .search-box input{
-    width:180px;
     border:none;
     outline:none;
-    padding:9px 14px;
-    font-size:14px;
+    padding:10px 15px;
+    width:220px;
 }
 
 .search-box button{
-    border:none;
-    background:#198754;
+    background:#008000;
     color:#fff;
-    padding:9px 16px;
+    border:none;
+    padding:10px 18px;
     cursor:pointer;
-    transition:.3s;
 }
 
 .search-box button:hover{
@@ -103,175 +89,180 @@ img{
 
 .header-icons{
     display:flex;
-    align-items:center;
-    gap:18px;
+    gap:20px;
 }
 
 .header-icons a{
-    font-size:19px;
     color:#333;
+    font-size:22px;
     transition:.3s;
 }
 
 .header-icons a:hover{
     color:#ff6600;
-}/* ===============================
-   ShopBangla Professional CSS
-   Part 2 - Hero Section
-=============================== */
+}
 
 .hero{
     display:flex;
     justify-content:space-between;
     align-items:center;
-    gap:40px;
-    padding:60px 5%;
-    background:linear-gradient(135deg,#eefaf0,#ffffff);
+    padding:80px 60px;
+    background:linear-gradient(to right,#e8ffe8,#ffffff);
 }
 
 .hero-text{
-    flex:1;
+    width:50%;
 }
 
 .hero-text h1{
-    font-size:42px;
+    font-size:48px;
     color:#222;
-    line-height:1.2;
-    margin-bottom:18px;
+    margin-bottom:15px;
 }
 
 .hero-text p{
-    font-size:16px;
-    color:#666;
+    font-size:18px;
     margin-bottom:25px;
 }
 
 .hero-image{
-    flex:1;
-    display:flex;
-    justify-content:center;
-}
-
-.hero-image img{
-    width:100%;
-    max-width:500px;
+    width:45%;
 }
 
 .btn{
     display:inline-block;
-    padding:12px 28px;
-    background:#198754;
+    padding:14px 30px;
+    background:#008000;
     color:#fff;
-    font-size:15px;
-    font-weight:bold;
-    border-radius:8px;
+    border-radius:6px;
     transition:.3s;
 }
 
 .btn:hover{
     background:#ff6600;
-}
-
-.section-title{
+}.section-title{
     text-align:center;
-    margin:50px 0 30px;
+    margin:60px 0 30px;
 }
 
 .section-title h2{
-    font-size:32px;
+    font-size:35px;
     color:#222;
-    margin-bottom:10px;
 }
 
 .section-title p{
     color:#666;
-    font-size:15px;
-}/* ===============================
-   ShopBangla Professional CSS
-   Part 3 - Category Section
-=============================== */
+    margin-top:10px;
+}
 
 .category{
-    padding:50px 5%;
+    padding:60px;
     background:#ffffff;
 }
 
 .category-box{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:25px;
 }
 
 .box{
-    background:#fff;
-    border:1px solid #e5e5e5;
+    background:#f9f9f9;
     border-radius:12px;
-    padding:18px;
+    padding:20px;
     text-align:center;
-    cursor:pointer;
     transition:.3s;
-    box-shadow:0 3px 10px rgba(0,0,0,.05);
+    cursor:pointer;
 }
 
 .box:hover{
-    transform:translateY(-6px);
-    box-shadow:0 10px 20px rgba(0,0,0,.12);
-    border-color:#198754;
+    transform:translateY(-8px);
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 .box img{
-    width:80px;
-    height:80px;
+    width:100px;
+    height:100px;
     margin:auto;
-    object-fit/* ===============================
-   ShopBangla Professional CSS
-   Part 4 - Product Section
-=============================== */
+    object-fit:contain;
+}
+
+.box h3{
+    margin-top:15px;
+    color:#333;
+}
+
+.featured{
+    padding:60px;
+    background:#f5f5f5;
+}
 
 .product-container{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
 .product-card{
     background:#fff;
-    border:1px solid #e8e8e8;
     border-radius:12px;
-    padding:18px;
+    padding:20px;
     text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
     transition:.3s;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
 }
 
 .product-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transform:translateY(-10px);
 }
 
 .product-card img{
-    width:160px;
-    height:160px;
-    margin:auto;
+    width:180px;
+    height:180px;
     object-fit:contain;
-    margin-bottom:15px;
+    margin:auto;
 }
 
 .product-card h3{
-    font-size:19px;
-    color:#222;
-    margin-bottom:8/* ===============================
-   ShopBangla Professional CSS
-   Part 5 - Contact & Cart
-=============================== */
+    margin:15px 0 10px;
+    font-size:22px;
+}
 
-.contact{
-    padding:50px 5%;
+.product-card p{
+    color:#777;
+    margin-bottom:10px;
+}
+
+.product-card h4{
+    color:#008000;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.product-card button{
+    background:#008000;
+    color:#fff;
+    border:none;
+    padding:12px 20px;
+    border-radius:6px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card button:hover{
+    background:#ff6600;
+}
+
+.flash-sale{
+    padding:60px;
+    background:#ffffff;
+}.contact{
+    padding:60px;
     background:#ffffff;
 }
 
 .contact form{
-    max-width:650px;
+    max-width:700px;
     margin:auto;
     display:flex;
     flex-direction:column;
@@ -281,34 +272,20 @@ img{
 .contact input,
 .contact textarea{
     width:100%;
-    padding:12px 15px;
+    padding:15px;
     border:1px solid #ddd;
-    border-radius:8px;
+    border-radius:6px;
     outline:none;
-    font-size:15px;
-    transition:.3s;
-}
-
-.contact input:focus,
-.contact textarea:focus{
-    border-color:#198754;
-    box-shadow:0 0 8px rgba(25,135,84,.2);
-}
-
-.contact textarea{
-    resize:vertical;
-    min-height:140px;
 }
 
 .contact button{
-    background:#198754;
+    background:#008000;
     color:#fff;
     border:none;
-    padding:12px;
-    border-radius:8px;
-    font-size:16px;
+    padding:15px;
+    border-radius:6px;
     cursor:pointer;
-    transition:.3s;
+    font-size:16px;
 }
 
 .contact button:hover{
@@ -316,160 +293,161 @@ img{
 }
 
 .cart{
-    padding:50px 5%;
-    background:#f8f9fa;
+    padding:60px;
+    background:#f5f5f5;
 }
 
 .cart h1{
     text-align:center;
-    color:#198754/* ===============================
-   ShopBangla Professional CSS
-   Part 6 - Login, Register & Profile
-=============================== */
-
-.login-section,
-.register-section,
-.profile-section{
-    min-height:80vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:50px 20px;
-    background:#f4f6f9;
+    margin-bottom:30px;
+    color:#008000;
 }
 
-.login-box,
-.register-box,
-.profile-box{
+.cart-table{
     width:100%;
-    max-width:420px;
+    border-collapse:collapse;
     background:#fff;
-    padding:35px;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(0,0,0,.08);
 }
 
-.login-box h2,
-.register-box h2,
-.profile-box h2{
-    text-align:center;
-    color:#222;
-    margin-bottom:25px;
-    font-size:28px;
-}
-
-.login-box input,
-.register-box input,
-.profile-box input{
-    width:100%;
-    padding:12px 15px;
-    margin-bottom:15px;
+.cart-table th,
+.cart-table td{
     border:1px solid #ddd;
-    border-radius:8px;
-    font-size:15px;
-    outline:none;
-    transition:.3s;
+    padding:15px;
+    text-align:center;
 }
 
-.login-box input:focus,
-.register-box input:focus,
-.profile-box input:focus{
-    border-color:#198754;
-    box-shadow:0 0 8px rgba(25,135,84,.2);
+.cart-table th{
+    background:#008000;
+    color:#fff;
 }
 
-.login-box button,
-.register-box button,
-.profile-box button{
-    width:100%;
-    padding:12px;
-    background:#198754;
+.cart-table button{
+    background:#ff0000;
     color:#fff;
     border:none;
-    border-radius:8px;
-    font-size:16px;
+    padding:8px 15px;
+    border-radius:5px;
     cursor:pointer;
-    transition:.3s;
 }
 
-.login-box button:hover,
-.register-box button:hover,
-.profile-box button:hover{
-    background:#ff6600;
+.cart-summary{
+    text-align:right;
+    margin-top:30px;
 }
 
-.login-box p,
-.register-box p{
-    margin-top:15px;
-    text-align:center;
-    font-size:15px;
+.cart-summary h2{
+    margin-bottom:15px;
 }
-
-.login-box a,
-.register-box a{
-    color:#ff6600;
-    font-weight:bold;
-}
-
-.profile-box img{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    object-fit:cover;
-    margin:0 auto 20px;
-    border:4px solid #198754;
-}/* ===============================
-   ShopBangla Professional CSS
-   Part 7 - Footer & Responsive
-=============================== */
 
 footer{
-    background:#1f1f1f;
+    background:#222;
     color:#fff;
-    padding:40px 5%;
-    margin-top:50px;
-}
-
-.footer-content{
     text-align:center;
+    padding:25px;
+    margin-top:50px;
 }
 
 .footer-content h2{
     color:#ff6600;
-    font-size:28px;
     margin-bottom:10px;
 }
 
-.footer-content p{
-    color:#ccc;
-    font-size:15px;
-    margin-bottom:8px;
+@media(max-width:768px){
+
+.header{
+    flex-direction:column;
+    gap:15px;
+    padding:20px;
 }
 
-.footer-content a{
+.navbar ul{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-text,
+.hero-image{
+    width:100%;
+}
+
+.category,
+.featured,
+.contact,
+.cart{
+    padding:30px 20px;
+}
+
+.search-box input{
+    width:160px;
+}
+
+.cart-table{
+    font-size:14px;
+}
+
+}/* ===== Login Page ===== */
+
+.login-section{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:#f5f7fa;
+    padding:40px 20px;
+}
+
+.login-box{
+    width:400px;
+    background:#fff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.login-box h2{
+    text-align:center;
+    margin-bottom:25px;
+    color:#222;
+}
+
+.login-box input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:16px;
+}
+
+.login-box button{
+    width:100%;
+    padding:12px;
+    background:#27ae60;
     color:#fff;
+    border:none;
+    border-radius:6px;
+    font-size:17px;
+    cursor:pointer;
     transition:.3s;
 }
 
-.footer-content a:hover{
-    color:#ff6600;
+.login-box button:hover{
+    background:#1e8449;
 }
 
-/* ===============================
-   Responsive Design
-=============================== */
+.login-box p{
+    text-align:center;
+    margin-top:15px;
+}
 
-@media (max-width:992px){
-
-    .header{
-        padding:12px 20px;
-        flex-wrap:wrap;
-        gap:15px;
-    }
-
-    .hero{
-        padding:40px 20px;
-        gap:30px;
-    }
-
-    .hero-text h1{
+.login-box a{
+    color:#e74c3c;
+    text-decoration:none;
+    font-weight:bold;
+}
