@@ -21,6 +21,8 @@
             </a>
         </div>
 
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+
         <nav class="site-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -52,21 +54,33 @@
                 <p>We would love to hear from you.</p>
             </div>
 
-            <form class="form-card">
-                <label for="name">Your Name</label>
-                <input id="name" name="name" type="text" placeholder="Your Name" required>
+            <div class="checkout-layout">
+                <form class="form-card">
+                    <label for="name">Your Name</label>
+                    <input id="name" name="name" type="text" placeholder="Your Name" required>
 
-                <label for="email">Your Email</label>
-                <input id="email" name="email" type="email" placeholder="Your Email" required>
+                    <label for="email">Your Email</label>
+                    <input id="email" name="email" type="email" placeholder="Your Email" required>
 
-                <label for="subject">Subject</label>
-                <input id="subject" name="subject" type="text" placeholder="Subject" required>
+                    <label for="subject">Subject</label>
+                    <input id="subject" name="subject" type="text" placeholder="Subject" required>
 
-                <label for="message">Your Message</label>
-                <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
 
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+                    <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send Message</button>
+                </form>
+
+                <aside class="checkout-summary">
+                    <h3>Need help?</h3>
+                    <p>Reach out to our care team for support, product questions, or order updates.</p>
+                    <ul style="margin-top: 12px; color: var(--muted);">
+                        <li><i class="fas fa-envelope"></i> support@shopbangla.com</li>
+                        <li><i class="fas fa-phone"></i> +880 1712 345678</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</li>
+                    </ul>
+                </aside>
+            </div>
         </section>
     </main>
 

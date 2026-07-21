@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | ShopBangla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern.css">
+</head>
+<body>
+    <div class="admin-login-overlay" id="admin-login-screen">
+        <div class="admin-card" style="width:min(100%,420px);">
+            <h2>Admin Login</h2>
+            <p style="color:var(--muted); margin-bottom:14px;">Secure access to the ShopBangla control panel.</p>
+            <form id="admin-login-form" class="form-card">
+                <label for="admin-email">Email</label>
+                <input id="admin-email" type="email" required>
+                <label for="admin-password">Password</label>
+                <input id="admin-password" type="password" required>
+                <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i> Login</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="admin-shell" id="admin-dashboard" style="display:none;">
+        <aside class="admin-sidebar">
+            <h3><i class="fas fa-store"></i> ShopBangla Admin</h3>
+            <nav class="admin-nav">
+                <button class="active" data-view="home"><i class="fas fa-chart-line"></i> Dashboard</button>
+                <button data-view="products"><i class="fas fa-box"></i> Products</button>
+                <button data-view="orders"><i class="fas fa-shopping-cart"></i> Orders</button>
+                <button data-view="customers"><i class="fas fa-users"></i> Customers</button>
+                <button data-view="reports"><i class="fas fa-file-alt"></i> Reports</button>
+                <button data-view="inventory"><i class="fas fa-warehouse"></i> Inventory</button>
+                <button id="admin-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </nav>
+        </aside>
+
+        <main class="admin-main">
+            <section id="view-home" class="admin-view">
+                <div class="section-title" style="text-align:left; margin:0 0 18px;">
+                    <h2>Dashboard Home</h2>
+                    <p>Overview of your storefront performance</p>
+                </div>
+                <div class="dashboard-grid">
+                    <article class="stat-card large"><strong>128</strong><span>Total Products</span></article>
+                    <article class="stat-card large"><strong>76</strong><span>Total Orders</span></article>
+                    <article class="stat-card large"><strong>54</strong><span>Total Customers</span></article>
+                    <article class="stat-card large"><strong>৳1.2M</strong><span>Total Revenue</span></article>
+                </div>
+                <div class="panel-card">
+                    <h3>Recent Orders</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Order ID</th><th>Customer</th><th>Status</th><th>Amount</th></tr></thead>
+                            <tbody>
+                                <tr><td>#1001</td><td>Rahim</td><td><span class="badge-pill">Confirmed</span></td><td>৳42,999</td></tr>
+                                <tr><td>#1002</td><td>Sadia</td><td><span class="badge-pill">Processing</span></td><td>৳3,999</td></tr>
+                                <tr><td>#1003</td><td>Karim</td><td><span class="badge-pill">Shipped</span></td><td>৳78,500</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="view-products" class="admin-view" style="display:none;">
+                <div class="section-title" style="text-align:left; margin:0 0 18px;">
+                    <h2>Product Management</h2>
+                    <p>Add, edit, search, and filter your catalog</p>
+                </div>
+                <div class="panel-card">
+                    <div class="products-toolbar">
+                        <input type="search" placeholder="Search products" style="max-width:260px;">
+                        <button class="btn" type="button"><i class="fas fa-plus"></i> Add Product</button>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Name</th><th>Category</th><th>Price</th><th>Status</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>Samsung Galaxy A55</td><td>Mobile</td><td>৳42,999</td><td><span class="badge-pill">Active</span></td><td><button class="btn2">Edit</button></td></tr>
+                                <tr><td>HP Pavilion Laptop</td><td>Laptop</td><td>৳78,500</td><td><span class="badge-pill">Active</span></td><td><button class="btn2">Edit</button></td></tr>
+                                <tr><td>Smart Watch</td><td>Watch</td><td>৳3,999</td><td><span class="badge-pill">Low Stock</span></td><td><button class="btn2">Edit</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="view-orders" class="admin-view" style="display:none;">
+                <div class="section-title" style="text-align:left; margin:0 0 18px;">
+                    <h2>Order Management</h2>
+                    <p>Track, update, and manage customer orders</p>
+                </div>
+                <div class="panel-card">
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Order ID</th><th>Customer</th><th>Items</th><th>Status</th><th>Action</th></tr></thead>
+                            <tbody>
+                                <tr><td>#1001</td><td>Rahim</td><td>1</td><td><select class="status-select"><option>Confirmed</option><option>Processing</option><option>Packed</option><option>Shipped</option></select></td><td><button class="btn2">Update</button></td></tr>
+                                <tr><td>#1002</td><td>Sadia</td><td>2</td><td><select class="status-select"><option>Pending</option><option>Confirmed</option><option>Processing</option></select></td><td><button class="btn2">Update</button></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="view-customers" class="admin-view" style="display:none;">
+                <div class="section-title" style="text-align:left; margin:0 0 18px;">
+                    <h2>Customer Management</h2>
+                    <p>Manage registered customers and activity</p>
+                </div>
+                <div class="panel-card">
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>Name</th><th>Email</th><th>Status</th><th>Orders</th></tr></thead>
+                            <tbody>
+                                <tr><td>Rahim</td><td>rahim@email.com</td><td><span class="badge-pill">Active</span></td><td>3</td></tr>
+                                <tr><td>Sadia</td><td>sadia@email.com</td><td><span class="badge-pill">Active</span></td><td>2</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <section id="view-reports" class="admin-view" style="display:none;">
+                <div class="section-title" style="text-align:left; margin:0 0 18px;">
+                    <h2>Sales Report</h2>
+                    <p>Review revenue and performance trends</p>
+                </div>
+                <div class="panel-card">
+                    <h3>Revenue Overview</h3>
+                    <p>Monthly revenue is trending up by 18% compared to last month.</p>
+                </div>
+            </section>
+
+            <section id="view-inventory" class="admin-view" style="display:none;">
+                <div class="section-title" style="text-align:left; margin:0 0 18px;">
+                    <h2>Inventory Management</h2>
+                    <p>Monitor stock availability and replenishment</p>
+                </div>
+                <div class="panel-card">
+                    <div class="table-wrap">
+                        <table>
+                            <thead><tr><th>SKU</th><th>Item</th><th>Stock</th><th>Threshold</th></tr></thead>
+                            <tbody>
+                                <tr><td>SGA55</td><td>Samsung Galaxy A55</td><td>12</td><td>10</td></tr>
+                                <tr><td>HP15</td><td>HP Pavilion Laptop</td><td>6</td><td>8</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

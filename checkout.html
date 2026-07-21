@@ -21,6 +21,8 @@
             </a>
         </div>
 
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+
         <nav class="site-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -46,33 +48,45 @@
     </header>
 
     <main id="main-content">
-        <section class="contact-page" aria-labelledby="checkout-title">
+        <section class="auth-section" aria-labelledby="checkout-title">
             <div class="section-title">
                 <h2 id="checkout-title">Checkout</h2>
                 <p>Complete your order by filling in the information below.</p>
             </div>
 
-            <form class="form-card">
-                <label for="full-name">Full Name</label>
-                <input id="full-name" name="full-name" type="text" placeholder="Full Name" required>
+            <div class="checkout-layout">
+                <form class="form-card checkout-form">
+                    <label for="full-name">Full Name</label>
+                    <input id="full-name" name="full-name" type="text" placeholder="Full Name" required>
 
-                <label for="checkout-email">Email Address</label>
-                <input id="checkout-email" name="checkout-email" type="email" placeholder="Email Address" required>
+                    <label for="checkout-email">Email Address</label>
+                    <input id="checkout-email" name="checkout-email" type="email" placeholder="Email Address" required>
 
-                <label for="phone">Phone Number</label>
-                <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
+                    <label for="phone">Phone Number</label>
+                    <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
 
-                <label for="address">Full Delivery Address</label>
-                <textarea id="address" name="address" rows="5" placeholder="Full Delivery Address" required></textarea>
+                    <label for="address">Full Delivery Address</label>
+                    <textarea id="address" name="address" rows="5" placeholder="Full Delivery Address" required></textarea>
 
-                <label for="city">City</label>
-                <input id="city" name="city" type="text" placeholder="City" required>
+                    <label for="city">City</label>
+                    <input id="city" name="city" type="text" placeholder="City" required>
 
-                <label for="postal-code">Postal Code</label>
-                <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code" required>
+                    <label for="postal-code">Postal Code</label>
+                    <input id="postal-code" name="postal-code" type="text" placeholder="Postal Code" required>
 
-                <button type="submit" class="btn">Place Order</button>
-            </form>
+                    <button type="submit" class="btn"><i class="fas fa-lock"></i> Place Order</button>
+                </form>
+
+                <aside class="checkout-summary">
+                    <h3>Secure checkout</h3>
+                    <p>Trusted payments, fast dispatch, and warranty-backed products.</p>
+                    <ul style="margin-top: 12px; color: var(--muted);">
+                        <li><i class="fas fa-check-circle"></i> Cash on delivery available</li>
+                        <li><i class="fas fa-check-circle"></i> Free shipping over ৳1,000</li>
+                        <li><i class="fas fa-check-circle"></i> Easy returns within 7 days</li>
+                    </ul>
+                </aside>
+            </div>
         </section>
     </main>
 

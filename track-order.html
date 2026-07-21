@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | ShopBangla</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern.css">
+</head>
+<body>
+    <header class="site-header" role="banner">
+        <div class="logo"><a href="index.html"><h1>Shop<span>Bangla</span></h1></a></div>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="track-order.html" class="active">Track Order</a></li>
+            </ul>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <main id="main-content">
+        <section class="auth-section">
+            <div class="section-title">
+                <h2>Track Your Order</h2>
+                <p>Enter your order ID or customer details to monitor the shipment.</p>
+            </div>
+            <div class="track-card" style="max-width:760px; margin:0 auto;">
+                <form class="form-card" id="track-form">
+                    <label for="order-id">Order ID</label>
+                    <input id="order-id" type="text" placeholder="e.g. #1001" required>
+                    <label for="customer-name">Customer Name</label>
+                    <input id="customer-name" type="text" placeholder="Enter customer name" required>
+                    <button class="btn" type="submit"><i class="fas fa-search"></i> Track Order</button>
+                </form>
+
+                <div class="panel-card" style="margin-top:16px;">
+                    <h3>Order Summary</h3>
+                    <p><strong>Order ID:</strong> #1001</p>
+                    <p><strong>Customer:</strong> Rahim</p>
+                    <p><strong>Product:</strong> Samsung Galaxy A55</p>
+                    <p><strong>Status:</strong> <span class="badge-pill">Shipped</span></p>
+                    <div class="track-progress">
+                        <div class="step-pill">Pending</div>
+                        <div class="step-pill">Confirmed</div>
+                        <div class="step-pill">Processing</div>
+                        <div class="step-pill">Packed</div>
+                        <div class="step-pill is-active">Shipped</div>
+                        <div class="step-pill">Out For Delivery</div>
+                        <div class="step-pill">Delivered</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Your trusted online shopping partner.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -21,6 +21,8 @@
             </a>
         </div>
 
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+
         <nav class="site-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -54,30 +56,43 @@
             </div>
 
             <div class="cart-container">
-                <article class="cart-item">
-                    <img src="images/mobile.jpg" alt="Samsung Galaxy A55 smartphone">
-                    <div class="cart-details">
-                        <h3>Samsung Galaxy A55</h3>
-                        <p>Price: ৳42,999</p>
-                        <p>Quantity: 1</p>
-                    </div>
-                    <h3>৳42,999</h3>
-                </article>
+                <div class="cart-list">
+                    <article class="cart-item">
+                        <img src="images/mobile.jpg" alt="Samsung Galaxy A55 smartphone">
+                        <div class="cart-details">
+                            <h3>Samsung Galaxy A55</h3>
+                            <p>Price: ৳42,999</p>
+                            <div class="qty-controls">
+                                <button type="button">−</button>
+                                <span>1</span>
+                                <button type="button">+</button>
+                            </div>
+                        </div>
+                        <h3>৳42,999</h3>
+                    </article>
 
-                <article class="cart-item">
-                    <img src="images/watch.jpg" alt="Smart watch">
-                    <div class="cart-details">
-                        <h3>Smart Watch</h3>
-                        <p>Price: ৳3,999</p>
-                        <p>Quantity: 1</p>
-                    </div>
-                    <h3>৳3,999</h3>
-                </article>
-
-                <div class="cart-total">
-                    <h2>Total: ৳46,998</h2>
-                    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+                    <article class="cart-item">
+                        <img src="images/watch.jpg" alt="Smart watch">
+                        <div class="cart-details">
+                            <h3>Smart Watch</h3>
+                            <p>Price: ৳3,999</p>
+                            <div class="qty-controls">
+                                <button type="button">−</button>
+                                <span>1</span>
+                                <button type="button">+</button>
+                            </div>
+                        </div>
+                        <h3>৳3,999</h3>
+                    </article>
                 </div>
+
+                <aside class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row"><span>Subtotal</span><strong>৳46,998</strong></div>
+                    <div class="summary-row"><span>Shipping</span><strong>৳120</strong></div>
+                    <div class="summary-row"><span>Total</span><strong>৳47,118</strong></div>
+                    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+                </aside>
             </div>
         </section>
     </main>

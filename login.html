@@ -21,6 +21,8 @@
             </a>
         </div>
 
+        <button class="menu-toggle" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+
         <nav class="site-nav" aria-label="Primary navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -39,8 +41,9 @@
 
     <main id="main-content">
         <section class="login-page" aria-labelledby="login-title">
-            <div class="login-card">
-                <h2 id="login-title">Login</h2>
+            <div class="auth-card login-card">
+                <h2 id="login-title">Welcome back</h2>
+                <p style="color: var(--muted); margin-bottom: 14px;">Log in to view orders, wishlist items, and saved addresses.</p>
                 <form class="login-form">
                     <div class="input-box">
                         <label for="email">Email Address</label>
@@ -52,7 +55,7 @@
                         <input id="password" name="password" type="password" placeholder="Enter your password" required>
                     </div>
 
-                    <button type="submit" class="btn">Login</button>
+                    <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i> Login</button>
 
                     <p class="register-link">
                         Don't have an account?
