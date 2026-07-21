@@ -1,29 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage your ShopBangla profile, address, and account details.">
     <title>My Profile | ShopBangla</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="header">
+    <header class="site-header" role="banner">
+        <div class="logo">
+            <a href="index.html" aria-label="ShopBangla home page">
+                <h1>Shop<span>Bangla</span></h1>
+            </a>
+        </div>
 
-    <div class="logo">
-        <h2>Shop<span>Bangla</span></h2>
-    </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="profile.html" class="
+        <form class="search-box" role="search">
+            <label class="sr-only" for="site-search">Search products</label>
+            <input id="site-search" name="site-search" type="search" placeholder="Search products...">
+            <button type="submit" aria-label="Search products"><i class="fas fa-search"></i></button>
+        </form>
+
+        <div class="header-icons" aria-label="Quick links">
+            <a href="wishlist.html" aria-label="View wishlist"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" aria-label="View cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" aria-label="Login or register"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="contact-page" aria-labelledby="profile-title">
+            <div class="section-title">
+                <h2 id="profile-title">My Profile</h2>
+                <p>Manage your account details and preferences</p>
+            </div>
+
+            <div class="about-card">
+                <p><strong>Name:</strong> Ayesha Rahman</p>
+                <p><strong>Email:</strong> ayesha@example.com</p>
+                <p><strong>Phone:</strong> +880 1712 345678</p>
+                <p><strong>Address:</strong> House 14, Road 7, Dhaka</p>
+                <p><strong>Member Since:</strong> January 2025</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Your trusted online shopping partner.</p>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© 2025 ShopBangla. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

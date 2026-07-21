@@ -3,311 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopBangla offers trusted electronics, fashion, and home essentials across Bangladesh.">
     <title>ShopBangla | Online Shopping Bangladesh</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern.css">
 </head>
 
-<body>
+<body data-page="home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- ================= HEADER ================= -->
-
-<header class="header">
-
-    <div class="logo">
-        <h2>Shop<span>Bangla</span></h2>
-    </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="search-box">
-        <input type="text" placeholder="Search products...">
-        <button>
-            <i class="fas fa-search"></i>
-        </button>
-    </div>
-
-    <div class="header-icons">
-        <a href="wishlist.html"><i class="fas fa-heart"></i></a>
-        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        <a href="login.html"><i class="fas fa-user"></i></a>
-    </div>
-
-</header>
-
-<!-- ================= HERO ================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <h1>Bangladesh's Biggest Online Shopping Store</h1>
-
-        <p>
-            Buy Mobiles, Laptops, Shoes, Watches, Headphones
-            and thousands of products at the best price.
-        </p>
-
-        <div class="hero-btn">
-            <a href="products.html" class="btn">Shop Now</a>
-            <a href="products.html" class="btn2">Today's Offers</a>
+    <header class="site-header" role="banner">
+        <div class="logo">
+            <a href="index.html" aria-label="ShopBangla home page">
+                <h1>Shop<span>Bangla</span></h1>
+            </a>
         </div>
 
-    </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
 
-    <div class="hero-image">
-        <img src="images/banner.jpg" alt="ShopBangla Banner">
-    </div>
+        <form class="search-box" role="search">
+            <label class="sr-only" for="site-search">Search products</label>
+            <input id="site-search" name="site-search" type="search" placeholder="Search products...">
+            <button type="submit" aria-label="Search products">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
 
-</section>
-
-<!-- ================= FLASH SALE ================= -->
-
-<section class="flash-sale">
-
-    <div class="section-title">
-        <h2>🔥 Flash Sale</h2>
-        <p>Limited Time Best Deals</p>
-    </div>
-
-    <div class="product-container"><div class="product-card">
-            <img src="images/mobile.jpg" alt="Mobile">
-            <h3>Samsung Galaxy A55</h3>
-            <p>6.6" AMOLED Display</p>
-            <h4>৳42,999</h4>
-            <button>Add To Cart</button>
+        <div class="header-icons" aria-label="Quick links">
+            <a href="wishlist.html" aria-label="View wishlist"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" aria-label="View cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" aria-label="Login or register"><i class="fas fa-user"></i></a>
         </div>
+    </header>
 
-        <div class="product-card">
-            <img src="images/laptop.jpg" alt="Laptop">
-            <h3>HP Pavilion Laptop</h3>
-            <p>Intel Core i5 • 16GB RAM</p>
-            <h4>৳78,500</h4>
-            <button>Add To Cart</button>
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-content">
+                <span class="badge"><i class="fas fa-bolt"></i> Fast shipping • Same-day dispatch</span>
+                <p class="eyebrow">Trusted online shopping in Bangladesh</p>
+                <h2 id="hero-title">Bangladesh's Biggest Online Shopping Store</h2>
+                <p>Buy Mobiles, Laptops, Shoes, Watches, Headphones and thousands of products at the best price with secure payments and easy returns.</p>
+                <div class="hero-actions">
+                    <a href="products.html" class="btn">Shop Now</a>
+                    <a href="products.html" class="btn2">Today's Offers</a>
+                </div>
+                <div class="sale-timer" aria-label="Flash sale countdown">
+                    <span><i class="fas fa-fire"></i> Ends in 03:12:07</span>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="images/banner.jpg" alt="ShopBangla banner showcasing popular deals">
+            </div>
+        </section>
+
+        <section class="flash-sale" aria-labelledby="flash-sale-title">
+            <div class="section-title">
+                <h2 id="flash-sale-title">🔥 Flash Sale</h2>
+                <p>Limited time best deals for this week</p>
+            </div>
+
+            <div class="product-container">
+                <article class="product-card">
+                    <img src="images/mobile.jpg" alt="Samsung Galaxy A55 smartphone in blue">
+                    <h3>Samsung Galaxy A55</h3>
+                    <p>6.6" AMOLED Display</p>
+                    <h4>৳42,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/laptop.jpg" alt="HP Pavilion laptop">
+                    <h3>HP Pavilion Laptop</h3>
+                    <p>Intel Core i5 • 16GB RAM</p>
+                    <h4>৳78,500</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/watch.jpg" alt="Smart watch with fitness tracking">
+                    <h3>Smart Watch</h3>
+                    <p>Heart Rate Monitor</p>
+                    <h4>৳3,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/shoe.jpg" alt="Sports shoes for running">
+                    <h3>Sports Shoes</h3>
+                    <p>Comfortable Running Shoes</p>
+                    <h4>৳2,499</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/headphone.jpg" alt="Wireless noise cancelling headphones">
+                    <h3>Wireless Headphone</h3>
+                    <p>Noise Cancelling</p>
+                    <h4>৳4,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="category" aria-labelledby="category-title">
+            <div class="section-title">
+                <h2 id="category-title">Shop By Category</h2>
+                <p>Choose your favorite category</p>
+            </div>
+
+            <div class="product-container">
+                <article class="product-card">
+                    <img src="images/mobile.jpg" alt="Mobile phones category">
+                    <h3>Mobiles</h3>
+                    <p>Latest flagship phones</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/laptop.jpg" alt="Laptops category">
+                    <h3>Laptops</h3>
+                    <p>Work, study and gaming</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/watch.jpg" alt="Watches category">
+                    <h3>Watches</h3>
+                    <p>Smart & classic styles</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/shoe.jpg" alt="Shoes category">
+                    <h3>Shoes</h3>
+                    <p>Casual and performance</p>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/headphone.jpg" alt="Headphones category">
+                    <h3>Headphones</h3>
+                    <p>Immersive sound</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="featured" aria-labelledby="featured-title">
+            <div class="section-title">
+                <h2 id="featured-title">Featured Products</h2>
+                <p>Best selling products selected for you</p>
+            </div>
+
+            <div class="product-container">
+                <article class="product-card">
+                    <img src="images/mobile.jpg" alt="Apple iPhone 15 smartphone">
+                    <h3>Apple iPhone 15</h3>
+                    <p>★★★★★</p>
+                    <h4>৳1,24,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/laptop.jpg" alt="Gaming laptop">
+                    <h3>Gaming Laptop</h3>
+                    <p>★★★★★</p>
+                    <h4>৳1,45,000</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/headphone.jpg" alt="Wireless headphone">
+                    <h3>Wireless Headphone</h3>
+                    <p>★★★★★</p>
+                    <h4>৳4,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/shoe.jpg" alt="Sports shoes">
+                    <h3>Sports Shoes</h3>
+                    <p>★★★★★</p>
+                    <h4>৳2,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="services" aria-label="Store services">
+            <div class="service-box">
+                <i class="fas fa-shield-alt"></i>
+                <h3>100% Trusted</h3>
+                <p>Original products with warranty</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-undo"></i>
+                <h3>Easy Returns</h3>
+                <p>7-day return window</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-truck"></i>
+                <h3>Free Delivery</h3>
+                <p>Free delivery on orders over ৳1000</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-credit-card"></i>
+                <h3>Secure Payment</h3>
+                <p>bKash, Nagad, Card</p>
+            </div>
+
+            <div class="service-box">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Always ready to help</p>
+            </div>
+        </section>
+
+        <section class="trust-section" aria-labelledby="trust-title">
+            <div class="section-title">
+                <h2 id="trust-title">Why ShopBangla</h2>
+                <p>Customers trust us for safe shopping and fast support</p>
+            </div>
+            <div class="trust-badges">
+                <article class="trust-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Secure Checkout</h3>
+                    <p>Encrypted payments and protected orders</p>
+                </article>
+                <article class="trust-card">
+                    <i class="fas fa-star"></i>
+                    <h3>Rated 4.9/5</h3>
+                    <p>Thousands of happy buyers across Bangladesh</p>
+                </article>
+                <article class="trust-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Live Support</h3>
+                    <p>Expert help from real people whenever you need it</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="newsletter" aria-label="Newsletter signup">
+            <h2>Stay ahead with exclusive offers</h2>
+            <p>Join our newsletter for the latest discounts and product drops.</p>
+            <form>
+                <input type="email" placeholder="Email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <section class="reviews" aria-labelledby="reviews-title">
+            <div class="section-title">
+                <h2 id="reviews-title">Customer Reviews</h2>
+            </div>
+
+            <div class="review-container">
+                <article class="review-card">
+                    <h3>Rahim</h3>
+                    <p>★★★★★</p>
+                    <p>Excellent service and fast delivery.</p>
+                </article>
+
+                <article class="review-card">
+                    <h3>Karim</h3>
+                    <p>★★★★★</p>
+                    <p>Original products with affordable price.</p>
+                </article>
+
+                <article class="review-card">
+                    <h3>Sadia</h3>
+                    <p>★★★★☆</p>
+                    <p>Very good shopping experience.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact-page" aria-labelledby="contact-title">
+            <div class="section-title">
+                <h2 id="contact-title">Contact Us</h2>
+            </div>
+
+            <form class="form-card">
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="Your Name" required>
+
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" placeholder="Your Email" required>
+
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Your trusted online shopping partner.</p>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 ShopBangla. All Rights Reserved.</p>
         </div>
+    </footer>
 
-        <div class="product-card">
-            <img src="images/watch.jpg" alt="Watch">
-            <h3>Smart Watch</h3>
-            <p>Heart Rate Monitor</p>
-            <h4>৳3,999</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/shoe.jpg" alt="Shoes">
-            <h3>Sports Shoes</h3>
-            <p>Comfortable Running Shoes</p>
-            <h4>৳2,499</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/headphone.jpg" alt="Headphone">
-            <h3>Wireless Headphone</h3>
-            <p>Noise Cancelling</p>
-            <h4>৳4,999</h4>
-            <button>Add To Cart</button>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= CATEGORY ================= -->
-
-<section class="category">
-
-    <div class="section-title">
-        <h2>Shop By Category</h2>
-        <p>Choose Your Favorite Category</p>
-    </div>
-
-    <div class="product-container">
-
-        <div class="product-card">
-            <img src="images/mobile.jpg" alt="Mobile">
-            <h3>Mobiles</h3>
-        </div>
-
-        <div class="product-card">
-            <img src="images/laptop.jpg" alt="Laptop">
-            <h3>Laptops</h3>
-        </div>
-
-        <div class="product-card">
-            <img src="images/watch.jpg" alt="Watch">
-            <h3>Watches</h3>
-        </div>
-
-        <div class="product-card">
-            <img src="images/shoe.jpg" alt="Shoes">
-            <h3>Shoes</h3>
-        </div>
-
-        <div class="product-card">
-            <img src="images/headphone.jpg" alt="Headphone">
-            <h3>Headphones</h3>
-        </div>
-
-    </div>
-
-</section><!-- ================= FEATURED PRODUCTS ================= -->
-
-<section class="featured">
-
-    <div class="section-title">
-        <h2>Featured Products</h2>
-        <p>Best Selling Products</p>
-    </div>
-
-    <div class="product-container">
-
-        <div class="product-card">
-            <img src="images/mobile.jpg" alt="iPhone">
-            <h3>Apple iPhone 15</h3>
-            <p>★★★★★</p>
-            <h4>৳1,24,999</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/laptop.jpg" alt="Laptop">
-            <h3>Gaming Laptop</h3>
-            <p>★★★★★</p>
-            <h4>৳1,45,000</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/headphone.jpg" alt="Headphone">
-            <h3>Wireless Headphone</h3>
-            <p>★★★★★</p>
-            <h4>৳4,999</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/shoe.jpg" alt="Shoes">
-            <h3>Sports Shoes</h3>
-            <p>★★★★★</p>
-            <h4>৳2,999</h4>
-            <button>Add To Cart</button>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= SERVICES ================= -->
-
-<section class="services">
-
-    <div class="service-box">
-        <i class="fas fa-truck"></i>
-        <h3>Free Delivery</h3>
-        <p>Free delivery on orders over ৳1000</p>
-    </div>
-
-    <div class="service-box">
-        <i class="fas fa-credit-card"></i>
-        <h3>Secure Payment</h3>
-        <p>bKash, Nagad, Card</p>
-    </div>
-
-    <div class="service-box">
-        <i class="fas fa-headset"></i>
-        <h3>24/7 Support</h3>
-        <p>Always ready to help</p>
-    </div>
-
-</section>
-
-<!-- ================= REVIEWS ================= -->
-
-<section class="reviews">
-
-    <div class="section-title">
-        <h2>Customer Reviews</h2>
-    </div>
-
-    <div class="review-container">
-
-        <div class="review-card">
-            <h3>Rahim</h3>
-            <p>★★★★★</p>
-            <p>Excellent service and fast delivery.</p>
-        </div>
-
-        <div class="review-card">
-            <h3>Karim</h3>
-            <p>★★★★★</p>
-            <p>Original products with affordable price.</p>
-        </div>
-
-        <div class="review-card">
-            <h3>Sadia</h3>
-            <p>★★★★☆</p>
-            <p>Very good shopping experience.</p>
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section class="contact">
-
-    <div class="section-title">
-        <h2>Contact Us</h2>
-    </div>
-
-    <form>
-
-        <input type="text" placeholder="Your Name" required>
-
-        <input type="email" placeholder="Your Email" required>
-
-        <textarea rows="5" placeholder="Your Message"></textarea>
-
-        <button type="submit" class="btn">Send Message</button>
-
-    </form>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2>ShopBangla</h2>
-
-        <p>Your Trusted Online Shopping Partner.</p>
-
-        <p>&copy; 2025 ShopBangla. All Rights Reserved.</p>
-
-    </div>
-
-</footer>
-
-<!-- JavaScript -->
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

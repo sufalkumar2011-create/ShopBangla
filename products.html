@@ -3,115 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse featured products and discover the best deals from ShopBangla.">
     <title>Products | ShopBangla</title>
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern.css">
 </head>
 
-<body>
+<body data-page="products">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="header">
-
-    <div class="logo">
-        <h2>Shop<span>Bangla</span></h2>
-    </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html" class="active">Products</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="header-icons">
-        <a href="wishlist.html"><i class="fas fa-heart"></i></a>
-        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        <a href="login.html"><i class="fas fa-user"></i></a>
-    </div>
-
-</header>
-
-<section class="featured">
-
-    <div class="section-title">
-        <h2>Our Products</h2>
-        <p>Choose Your Favorite Product</p>
-    </div>
-
-    <div class="product-container"><div class="product-card">
-            <img src="images/mobile.jpg" alt="Samsung Galaxy A55">
-            <h3>Samsung Galaxy A55</h3>
-            <p>6.6" AMOLED Display</p>
-            <h4>৳42,999</h4>
-            <button>Add To Cart</button>
+    <header class="site-header" role="banner">
+        <div class="logo">
+            <a href="index.html" aria-label="ShopBangla home page">
+                <h1>Shop<span>Bangla</span></h1>
+            </a>
         </div>
 
-        <div class="product-card">
-            <img src="images/laptop.jpg" alt="HP Laptop">
-            <h3>HP Pavilion Laptop</h3>
-            <p>Intel Core i5 | 16GB RAM</p>
-            <h4>৳78,500</h4>
-            <button>Add To Cart</button>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html" class="active">Products</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+
+        <form class="search-box" role="search">
+            <label class="sr-only" for="site-search">Search products</label>
+            <input id="site-search" name="site-search" type="search" placeholder="Search products...">
+            <button type="submit" aria-label="Search products"><i class="fas fa-search"></i></button>
+        </form>
+
+        <div class="header-icons" aria-label="Quick links">
+            <a href="wishlist.html" aria-label="View wishlist"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" aria-label="View cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" aria-label="Login or register"><i class="fas fa-user"></i></a>
         </div>
+    </header>
 
-        <div class="product-card">
-            <img src="images/watch.jpg" alt="Smart Watch">
-            <h3>Smart Watch</h3>
-            <p>Heart Rate Monitor</p>
-            <h4>৳3,999</h4>
-            <button>Add To Cart</button>
+    <main id="main-content">
+        <section class="featured" aria-labelledby="products-title">
+            <div class="section-title">
+                <h2 id="products-title">Our Products</h2>
+                <p>Choose your favorite product from the latest collection</p>
+            </div>
+
+            <div class="filter-panel" aria-label="Product filters">
+                <label>
+                    Category
+                    <select id="category-filter">
+                        <option value="all">All</option>
+                        <option value="mobile">Mobile</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="watch">Watch</option>
+                        <option value="shoe">Shoe</option>
+                        <option value="headphone">Headphone</option>
+                    </select>
+                </label>
+                <label>
+                    Price
+                    <select id="price-filter">
+                        <option value="all">Any price</option>
+                        <option value="low">Under ৳10,000</option>
+                        <option value="mid">৳10,000 - ৳50,000</option>
+                        <option value="high">Above ৳50,000</option>
+                    </select>
+                </label>
+                <label>
+                    Sort by
+                    <select id="sort-filter">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </label>
+                <label>
+                    Search
+                    <input id="product-search" type="search" placeholder="Search products">
+                </label>
+            </div>
+
+            <div class="products-toolbar">
+                <div class="results-count" id="results-count">Showing 6 products</div>
+            </div>
+
+            <div class="product-container" id="product-grid">
+                <article class="product-card">
+                    <img src="images/mobile.jpg" alt="Samsung Galaxy A55 smartphone">
+                    <h3>Samsung Galaxy A55</h3>
+                    <p>6.6&quot; AMOLED Display</p>
+                    <h4>৳42,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/laptop.jpg" alt="HP Pavilion laptop">
+                    <h3>HP Pavilion Laptop</h3>
+                    <p>Intel Core i5 | 16GB RAM</p>
+                    <h4>৳78,500</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/watch.jpg" alt="Smart watch">
+                    <h3>Smart Watch</h3>
+                    <p>Heart Rate Monitor</p>
+                    <h4>৳3,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/headphone.jpg" alt="Wireless headphone">
+                    <h3>Wireless Headphone</h3>
+                    <p>Noise Cancelling</p>
+                    <h4>৳4,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/shoe.jpg" alt="Sports shoes">
+                    <h3>Sports Shoes</h3>
+                    <p>Comfortable Running Shoes</p>
+                    <h4>৳2,499</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+
+                <article class="product-card">
+                    <img src="images/mobile.jpg" alt="Apple iPhone 15 smartphone">
+                    <h3>Apple iPhone 15</h3>
+                    <p>128GB | Blue</p>
+                    <h4>৳1,24,999</h4>
+                    <button type="button">Add To Cart</button>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Your trusted online shopping partner.</p>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 ShopBangla. All Rights Reserved.</p>
         </div>
+    </footer>
 
-        <div class="product-card">
-            <img src="images/headphone.jpg" alt="Headphone">
-            <h3>Wireless Headphone</h3>
-            <p>Noise Cancelling</p>
-            <h4>৳4,999</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/shoe.jpg" alt="Sports Shoes">
-            <h3>Sports Shoes</h3>
-            <p>Comfortable Running Shoes</p>
-            <h4>৳2,499</h4>
-            <button>Add To Cart</button>
-        </div>
-
-        <div class="product-card">
-            <img src="images/mobile.jpg" alt="iPhone">
-            <h3>Apple iPhone 15</h3>
-            <p>128GB | Blue</p>
-            <h4>৳1,24,999</h4>
-            <button>Add To Cart</button>
-        </div></div>
-
-</section>
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2>ShopBangla</h2>
-
-        <p>Your Trusted Online Shopping Partner.</p>
-
-        <p>&copy; 2025 ShopBangla. All Rights Reserved.</p>
-
-    </div>
-
-</footer>
-
-<!-- JavaScript -->
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

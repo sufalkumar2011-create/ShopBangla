@@ -1,83 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Create your ShopBangla account to save favorites, track orders, and shop faster.">
     <title>Register | ShopBangla</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="header">
+    <header class="site-header" role="banner">
+        <div class="logo">
+            <a href="index.html" aria-label="ShopBangla home page">
+                <h1>Shop<span>Bangla</span></h1>
+            </a>
+        </div>
 
-    <div class="logo">
-        <h2>Shop<span>Bangla</span></h2>
-    </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a class="active" href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="cart.html">Cart</a></li>
-            <li><a class="active" href="register.html">Register</a></li>
-        </ul>
-    </nav>
+        <form class="search-box" role="search">
+            <label class="sr-only" for="site-search">Search products</label>
+            <input id="site-search" name="site-search" type="search" placeholder="Search products...">
+            <button type="submit" aria-label="Search products"><i class="fas fa-search"></i></button>
+        </form>
 
-    <div class="header-icons">
-        <a href="wishlist.html"><i class="fas fa-heart"></i></a>
-        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        <a href="#"><i class="fas fa-user"></i></a>
-    </div>
+        <div class="header-icons" aria-label="Quick links">
+            <a href="wishlist.html" aria-label="View wishlist"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" aria-label="View cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" aria-label="Login or register"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
 
-</header>
+    <main id="main-content">
+        <section class="contact-page" aria-labelledby="register-title">
+            <div class="section-title">
+                <h2 id="register-title">Create Account</h2>
+                <p>Create your ShopBangla account.</p>
+            </div>
 
-<section class="contact">
+            <form class="form-card">
+                <label for="full-name">Full Name</label>
+                <input id="full-name" name="full-name" type="text" placeholder="Full Name" required>
 
-    <div class="section-title">
-        <h2>Create Account</h2>
-        <p>Create your ShopBangla account.</p>
-    </div>
+                <label for="register-email">Email Address</label>
+                <input id="register-email" name="register-email" type="email" placeholder="Email Address" required>
 
-    <form><input type="text" placeholder="Full Name" required>
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" type="tel" placeholder="Phone Number" required>
 
-        <input type="email" placeholder="Email Address" required>
+                <label for="username">Username</label>
+                <input id="username" name="username" type="text" placeholder="Username" required>
 
-        <input type="tel" placeholder="Phone Number" required>
+                <label for="password">Password</label>
+                <input id="password" name="password" type="password" placeholder="Password" required>
 
-        <input type="text" placeholder="Username" required>
+                <label for="confirm-password">Confirm Password</label>
+                <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirm Password" required>
 
-        <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn">Create Account</button>
+            </form>
+        </section>
+    </main>
 
-        <input type="password" placeholder="Confirm Password" required>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Fast, safe, and trusted online shopping.</p>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© 2026 ShopBangla. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-        <button type="submit" class="btn">
-            Create Account
-        </button>
-
-    </form>
-
-</section>
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2>ShopBangla</h2>
-
-        <p>Fast, Safe & Trusted Online Shopping.</p>
-
-        <p>© 2026 ShopBangla. All Rights Reserved.</p>
-
-    </div>
-
-</footer>
-
-<script src="script.js"></script></body>
+    <script src="script.js"></script>
+</body>
 </html>

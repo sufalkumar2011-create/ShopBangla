@@ -3,96 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Review your selected items and proceed to secure checkout on ShopBangla.">
     <title>Shopping Cart | ShopBangla</title>
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modern.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="header">
-
-    <div class="logo">
-        <h2>Shop<span>Bangla</span></h2>
-    </div>
-
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="cart.html" class="active">Cart</a></li>
-            <li><a href="wishlist.html">Wishlist</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-</header>
-
-<section class="cart">
-
-    <div class="section-title">
-        <h2>Your Shopping Cart</h2>
-        <p>Review your selected products</p>
-    </div>
-
-    <div class="cart-container"><div class="cart-item">
-
-            <img src="images/mobile.jpg" alt="Samsung Galaxy A55">
-
-            <div class="cart-details">
-                <h3>Samsung Galaxy A55</h3>
-                <p>Price: ৳42,999</p>
-                <p>Quantity: 1</p>
-            </div>
-
-            <h3>৳42,999</h3>
-
-        </div>
-
-        <div class="cart-item">
-
-            <img src="images/watch.jpg" alt="Smart Watch">
-
-            <div class="cart-details">
-                <h3>Smart Watch</h3>
-                <p>Price: ৳3,999</p>
-                <p>Quantity: 1</p>
-            </div>
-
-            <h3>৳3,999</h3>
-
-        </div>
-
-        <div class="cart-total">
-
-            <h2>Total: ৳46,998</h2>
-
-            <a href="checkout.html" class="btn">
-                Proceed to Checkout
+    <header class="site-header" role="banner">
+        <div class="logo">
+            <a href="index.html" aria-label="ShopBangla home page">
+                <h1>Shop<span>Bangla</span></h1>
             </a>
+        </div>
 
-        </div></div>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="wishlist.html">Wishlist</a></li>
+                <li><a href="cart.html" class="active">Cart</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
 
-</section>
+        <form class="search-box" role="search">
+            <label class="sr-only" for="site-search">Search products</label>
+            <input id="site-search" name="site-search" type="search" placeholder="Search products...">
+            <button type="submit" aria-label="Search products"><i class="fas fa-search"></i></button>
+        </form>
 
-<footer>
+        <div class="header-icons" aria-label="Quick links">
+            <a href="wishlist.html" aria-label="View wishlist"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" aria-label="View cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" aria-label="Login or register"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
 
-    <div class="footer-content">
+    <main id="main-content">
+        <section class="cart-page" aria-labelledby="cart-title">
+            <div class="section-title">
+                <h2 id="cart-title">Your Shopping Cart</h2>
+                <p>Review your selected products before checkout</p>
+            </div>
 
-        <h2>ShopBangla</h2>
+            <div class="cart-container">
+                <article class="cart-item">
+                    <img src="images/mobile.jpg" alt="Samsung Galaxy A55 smartphone">
+                    <div class="cart-details">
+                        <h3>Samsung Galaxy A55</h3>
+                        <p>Price: ৳42,999</p>
+                        <p>Quantity: 1</p>
+                    </div>
+                    <h3>৳42,999</h3>
+                </article>
 
-        <p>Your Trusted Online Shopping Partner.</p>
+                <article class="cart-item">
+                    <img src="images/watch.jpg" alt="Smart watch">
+                    <div class="cart-details">
+                        <h3>Smart Watch</h3>
+                        <p>Price: ৳3,999</p>
+                        <p>Quantity: 1</p>
+                    </div>
+                    <h3>৳3,999</h3>
+                </article>
 
-        <p>&copy; 2025 ShopBangla. All Rights Reserved.</p>
+                <div class="cart-total">
+                    <h2>Total: ৳46,998</h2>
+                    <a href="checkout.html" class="btn">Proceed to Checkout</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    </div>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Your trusted online shopping partner.</p>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>&copy; 2025 ShopBangla. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

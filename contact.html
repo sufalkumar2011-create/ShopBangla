@@ -3,82 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with ShopBangla for support, inquiries, and order-related questions.">
     <title>Contact Us | ShopBangla</title>
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="modern.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<header class="header">
+    <header class="site-header" role="banner">
+        <div class="logo">
+            <a href="index.html" aria-label="ShopBangla home page">
+                <h1>Shop<span>Bangla</span></h1>
+            </a>
+        </div>
 
-    <div class="logo">
-        <h2>Shop<span>Bangla</span></h2>
-    </div>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><a href="cart.html">Cart</a></li>
-        </ul>
-    </nav>
+        <form class="search-box" role="search">
+            <label class="sr-only" for="site-search">Search products</label>
+            <input id="site-search" name="site-search" type="search" placeholder="Search products...">
+            <button type="submit" aria-label="Search products"><i class="fas fa-search"></i></button>
+        </form>
 
-    <div class="header-icons">
-        <a href="wishlist.html"><i class="fas fa-heart"></i></a>
-        <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
-        <a href="login.html"><i class="fas fa-user"></i></a>
-    </div>
+        <div class="header-icons" aria-label="Quick links">
+            <a href="wishlist.html" aria-label="View wishlist"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" aria-label="View cart"><i class="fas fa-shopping-cart"></i></a>
+            <a href="login.html" aria-label="Login or register"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
 
-</header>
+    <main id="main-content">
+        <section class="contact-page" aria-labelledby="contact-title">
+            <div class="section-title">
+                <h2 id="contact-title">Contact Us</h2>
+                <p>We would love to hear from you.</p>
+            </div>
 
-<section class="contact">
+            <form class="form-card">
+                <label for="name">Your Name</label>
+                <input id="name" name="name" type="text" placeholder="Your Name" required>
 
-    <div class="section-title">
-        <h2>Contact Us</h2>
-        <p>We would love to hear from you.</p>
-    </div>
+                <label for="email">Your Email</label>
+                <input id="email" name="email" type="email" placeholder="Your Email" required>
 
-    <form>
+                <label for="subject">Subject</label>
+                <input id="subject" name="subject" type="text" placeholder="Subject" required>
 
-        <input type="text" placeholder="Your Name" required>
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Write your message..." required></textarea>
 
-        <input type="email" placeholder="Your Email" required>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
 
-        <input type="text" placeholder="Subject" required>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2>ShopBangla</h2>
+            <p>Fast, safe, and trusted online shopping.</p>
+            <div class="footer-links">
+                <a href="products.html">Products</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <p>© 2026 ShopBangla. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-        <textarea rows="6" placeholder="Write your message..." required></textarea>
-
-        <button type="submit" class="btn">
-            Send Message
-        </button>
-
-    </form>
-
-</section>
-
-<footer>
-
-    <div class="footer-content">
-
-        <h2>ShopBangla</h2>
-
-        <p>Fast, Safe & Trusted Online Shopping.</p>
-
-        <p>© 2026 ShopBangla. All Rights Reserved.</p>
-
-    </div>
-
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
-
 </
